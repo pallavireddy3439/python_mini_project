@@ -1,0 +1,24 @@
+from calculator import Calculator
+try:
+    num1=int(input("Enter First number: "))
+    num2=int(input("Enter Second number: "))
+    op=input("Enter operation: ")
+except ValueError:
+    print("Please enter valid number")
+    exit()
+cal=Calculator(num1,num2)
+if op=='+':
+    print(cal.add())
+elif op=='-':
+    print(cal.sub())
+elif op=='*':
+    print(cal.mul())
+elif op=='/':
+    print(cal.div())
+elif op=='%':
+    print(cal.mod())
+elif op=='^':
+    print(cal.power())
+else:
+    print("Please enter valid operation")
+    exit()
